@@ -36,8 +36,6 @@ tmp/
 temp/
 *.tmp
 
-
-datasets/
 outputs/checkpoints
 checkpoints
 
