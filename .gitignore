@@ -1,0 +1,45 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Runtime data
+pids/
+*.pid
+*.seed
+
+# Dependency directories
+node_modules/
+vendor/
+
+# Build output
+dist/
+build/
+out/
+target/
+
+# Environment variables
+.env
+.env.*
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+
+datasets/
+outputs/checkpoints
+checkpoints
+
+__pycache__/
+*.pyc
