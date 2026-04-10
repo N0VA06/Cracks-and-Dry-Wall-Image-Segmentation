@@ -183,3 +183,18 @@ crack corridor.
   epoch 6 limits conclusions — full training may yield stronger results.
 - **Drywall label quality** remains the single largest bottleneck; taping IoU
   correlates directly with annotation precision.
+
+---
+
+## Hyperparameters Used
+
+- **Input resolution**: 512×512 with ImageNet normalization — standardizes training and improves convergence.  
+- **Batch size**: 16 — balances GPU utilization and stability.  
+- **Optimizer**: Adam with learning rate 1e−4 and weight decay 1e−4 — stable convergence with regularization.  
+- **Scheduler**: Cosine annealing (η_min = 1e−6) — smooth learning rate decay.  
+- **Loss function**: BCE + Dice (equal weights, pos_weight = 10) — handles class imbalance and improves segmentation quality.  
+- **Backbone**: Frozen during initial training — preserves pretrained features and reduces overfitting.  
+- **Active learning**: 5 rounds, 10% query per round, 10 MC passes — uncertainty-based sample selection.  
+- **SAM configuration**: ViT-B backbone, LR = 3e−4, batch size = 4 — constrained by GPU memory.  
+- **Inference threshold**: 0.35 — tuned for better recall on thin structures.  
+- **Random seed**: 42 — ensures reproducibility across splits and training.  
