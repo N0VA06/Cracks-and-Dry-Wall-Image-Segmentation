@@ -25,7 +25,7 @@ to generate polygon masks automatically.
 
 1. **Smart point prompts** — 5 positive (joint axis) + 4 negative (corners)
 2. **SAM2-ViT-L** → 3 candidate masks
-3. **`select_best_mask()`** — reject if <1% or >85% of bbox area
+3. **`select_best_mask()`** — from valid masks (1%–85% of bbox area), pick the highest SAM confidence score; if none pass, relax the upper bound and pick the smallest above the minimum
 4. **GrabCut refinement** (OpenCV) — tightens boundary to tape texture
 5. **`findContours()`** → COCO polygon; bbox-fill fallback if no valid mask
 
