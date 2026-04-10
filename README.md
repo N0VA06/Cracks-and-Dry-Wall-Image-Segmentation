@@ -153,16 +153,16 @@ Results reported: **round 5** (10 fine-tuning epochs/round on the actively selec
 Each panel: **original image | ground-truth mask (green) | prediction (red)**
 
 **Pretrained**
-![pretrained](images/pretrained_crack_02__segment_crack.png)
+![pretrained](images/pretrained_crack_01__segment_crack.png)
 
 **Custom**
-![custom](images/custom_crack_02__segment_crack.png)
+![custom](images/custom_crack_01__segment_crack.png)
 
 **Active rd.5**
-![active](images/active_round5_crack_02__segment_crack.png)
+![active](images/active_round5_crack_01__segment_crack.png)
 
 **SAM**
-![sam](images/sam_crack_02__segment_crack.png)
+![sam](images/sam_crack_01__segment_crack.png)
 
 **Common failure:** All models produce masks wider than the hairline crack.
 `pos_weight=10` biases training toward recall, and standard normalisation
